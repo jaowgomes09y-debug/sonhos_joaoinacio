@@ -1,0 +1,416 @@
+/* ==============================
+   CONFIGS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul: #0d6efd;
+    --azul-escuro: #07111f;
+    --preto: #05070a;
+    --cinza: #121820;
+    --branco: #f5f7fa;
+    --cinza-claro: #aeb7c2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--preto);
+    color: var(--branco);
+    line-height: 1.6;
+}
+
+/* ==============================
+   MENU
+   ============================== */
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 7, 10, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--azul);
+}
+
+/* ==============================
+   SECOES
+   ============================== */
+
+.hero,
+.secao {
+    min-height: 100vh;
+    padding: 110px 20px 70px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(13, 110, 253, 0.25), transparent 30%),
+        linear-gradient(135deg, #05070a, #0b1420 60%, #05070a);
+}
+
+.hero-conteudo {
+    max-width: 850px;
+    animation: aparecer 1s ease;
+}
+
+.etec,
+.rotulo {
+    color: var(--azul);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.subtitulo {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--cinza-claro);
+    font-size: 1.2rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.25);
+}
+
+.conteudo {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.secao h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin: 5px 0 20px;
+}
+
+.secao > .conteudo > p:not(.rotulo) {
+    max-width: 750px;
+    color: var(--cinza-claro);
+}
+
+/* ==============================
+   CARD
+   ============================== */
+
+.carro-card {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--cinza);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.carro-imagem {
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle, rgba(13, 110, 253, 0.35), transparent 35%),
+        linear-gradient(145deg, #111b27, #05070a);
+    position: relative;
+}
+
+.carro-imagem::before {
+    content: "";
+    width: 75%;
+    height: 90px;
+    border-radius: 50% 50% 25% 25%;
+    border: 5px solid rgba(255, 255, 255, 0.75);
+    transform: skewX(-12deg);
+    box-shadow: 0 0 40px rgba(13, 110, 253, 0.35);
+}
+
+.carro-imagem span {
+    color: var(--azul);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+
+.carro-imagem strong {
+    font-size: 3rem;
+}
+
+.carro-info {
+    padding: 45px;
+}
+
+.carro-info h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.carro-info p {
+    color: var(--cinza-claro);
+}
+
+.carro-info ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.carro-info li {
+    margin: 12px 0;
+}
+
+/* ==============================
+   HOJE / CARDS
+   ============================== */
+
+.secao-escura {
+    background: #080d14;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.card {
+    background: #101720;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(13, 110, 253, 0.5);
+}
+
+.numero {
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: var(--cinza-claro);
+}
+
+/* ==============================
+   FUTURO
+   ============================== */
+
+.linha-tempo {
+    margin-top: 45px;
+    border-left: 2px solid var(--azul);
+    padding-left: 35px;
+}
+
+.etapa {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.etapa > span {
+    position: absolute;
+    left: -52px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--azul);
+    font-weight: bold;
+}
+
+.etapa h3 {
+    font-size: 1.4rem;
+}
+
+.etapa p {
+    color: var(--cinza-claro);
+}
+
+.frase {
+    margin-top: 55px;
+    padding: 30px;
+    background: #101720;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.frase span {
+    color: var(--azul);
+    font-size: 2rem;
+}
+
+/* ==============================
+   CONTATO
+   ============================== */
+
+.secao-contato {
+    background: #080d14;
+}
+
+.contato-box {
+    max-width: 700px;
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+label {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #263443;
+    background: #111923;
+    color: white;
+    font: inherit;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--azul);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.mensagem {
+    color: #58d68d;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+/* ==============================
+   RODAPE
+   ============================== */
+
+.rodape {
+    padding: 35px 20px;
+    text-align: center;
+    background: #030507;
+    color: var(--cinza-claro);
+}
+
+.rodape a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--azul);
+    text-decoration: none;
+}
+
+/* ==============================
+   ANIM
+   ============================== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 750px) {
+    .menu {
+        gap: 12px;
+        padding: 15px 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 0.85rem;
+    }
+
+    .carro-card {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .carro-info {
+        padding: 30px;
+    }
+}

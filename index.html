@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Sonho | BMW 320i</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/744/744465.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sonho">Sonho</a>
+            <a href="#hoje">Hoje</a>
+            <a href="#futuro">Futuro</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-conteudo">
+                <p class="etec">MEU MAIOR SONHO</p>
+                <h1>Meu Sonho</h1>
+                <p class="subtitulo">
+                    Transformar estudo, dedicação e programação
+                    em conquistas para o futuro.
+                </p>
+                <a class="botao" href="#sonho">Conheça meu sonho ↓</a>
+            </div>
+        </section>
+        <section id="sonho" class="secao">
+            <div class="conteudo">
+                <p class="rotulo">MEU OBJETIVO</p>
+                <h2>BMW 320i</h2>
+                <p>
+                    Um dos meus maiores sonhos é conquistar uma
+                    <strong>BMW 320i</strong>. Para mim, ela representa
+                    uma conquista que quero alcançar através do meu
+                    esforço e das minhas escolhas.
+                </p>
+                <div class="carro-card">
+                    <div class="carro-imagem">
+                        <span>BMW</span>
+                        <strong>320i</strong>
+                    </div>
+                    <div class="carro-info">
+                        <h3>Por que essa é a minha meta?</h3>
+                        <p>
+                            Porque gosto de carros e vejo a BMW 320i como
+                            um símbolo de independência, evolução e
+                            realização pessoal.
+                        </p>
+                        <ul>
+                            <li>🚗 Design que eu admiro</li>
+                            <li>⚡ Desempenho e tecnologia</li>
+                            <li>🎯 Uma meta para me motivar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="hoje" class="secao secao-escura">
+            <div class="conteudo">
+                <p class="rotulo">ONDE ESTOU AGORA</p>
+                <h2>Meu presente</h2>
+                <p>
+                    Atualmente estou no <strong>1º ano do Ensino Médio
+                    Técnico em Desenvolvimento de Sistemas na ETEC</strong>.
+                    Estou aprendendo programação e construindo uma base
+                    para poder alcançar meus objetivos.
+                </p>
+                <div class="cards">
+                    <article class="card">
+                        <span class="numero">01</span>
+                        <h3>Estudar</h3>
+                        <p>Aprender programação, lógica e novas tecnologias.</p>
+                    </article>
+                    <article class="card">
+                        <span class="numero">02</span>
+                        <h3>Praticar</h3>
+                        <p>Criar projetos e melhorar minhas habilidades.</p>
+                    </article>
+                    <article class="card">
+                        <span class="numero">03</span>
+                        <h3>Evoluir</h3>
+                        <p>Buscar conhecimento para crescer profissionalmente.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="futuro" class="secao">
+            <div class="conteudo">
+                <p class="rotulo">MEU PLANO</p>
+                <h2>O futuro que eu imagino</h2>
+                <div class="linha-tempo">
+                    <div class="etapa">
+                        <span>1</span>
+                        <div>
+                            <h3>Agora</h3>
+                            <p>Concluir o ensino médio técnico e aprender cada vez mais sobre desenvolvimento de sistemas.</p>
+                        </div>
+                    </div>
+                    <div class="etapa">
+                        <span>2</span>
+                        <div>
+                            <h3>Depois</h3>
+                            <p>Buscar oportunidades de trabalho e continuar estudando para crescer na área de tecnologia.</p>
+                        </div>
+                    </div>
+                    <div class="etapa">
+                        <span>3</span>
+                        <div>
+                            <h3>Minha conquista</h3>
+                            <p>Alcançar estabilidade financeira e realizar o sonho de ter minha BMW 320i.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="frase">
+                    <span>“</span>
+                    O sonho começa como uma ideia, mas vira realidade
+                    quando existe esforço para alcançá-lo.
+                    <span>”</span>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="secao secao-contato">
+            <div class="conteudo contato-box">
+                <p class="rotulo">FALE COMIGO</p>
+                <h2>Contato</h2>
+                <form id="formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    <label for="avaliacao">Sua avaliação:</label>
+                    <select id="avaliacao" name="avaliacao" required>
+                        <option value="">Escolha uma nota</option>
+                        <option value="1">1 - Ruim</option>
+                        <option value="2">2 - Regular</option>
+                        <option value="3">3 - Bom</option>
+                        <option value="4">4 - Muito bom</option>
+                        <option value="5">5 - Excelente</option>
+                    </select>
+                    <label for="comentario">Comentário:</label>
+                    <textarea id="comentario" name="comentario" rows="5"
+                        placeholder="Deixe seu comentário..." required></textarea>
+                    <button type="submit" class="botao">Enviar avaliação</button>
+                    <p id="mensagem" class="mensagem"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <h5>Meu Sonho • BMW 320i</h5>
+        <h5>João Inacio Gomes Da Silva 2026 - &copy; Todos os direitos reservados <br> Trabalho acadêmico sem fins lucrativos.</h5>
+        <a href="#inicio">Voltar ao início ↑</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

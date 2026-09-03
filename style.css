@@ -344,7 +344,7 @@ textarea:focus {
 }
 
 textarea {
-    resize: vertical;
+    resize: none;
 }
 
 .mensagem {
